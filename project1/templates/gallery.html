@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Gallery
+{% endblock %}
+
+{% block content%}
+<h1 class="text-center">PRODUCTS</h1>
+
+<div class="container text-center bg-light"></div>
+
+{% for d in gallery %} 
+
+
+
+    <div class="card text -center mx-3 my-3" style="width: 18rem; display:inline-block">
+        <img src="{{d.pro_image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Brand Name : {{d.pro_name}}</h5>
+          <p class="card-text">Rs: {{d.pro_prize}} </p>
+          
+        </div>
+    </div>
+
+
+
+{% endfor %}
+
+
+{% endblock %}

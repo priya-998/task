@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title%}
+login
+{% endblock %}
+
+{% block content%}
+<h1> login page </h1>
+
+ <form action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="" alt="" class="">
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+  
+    </p><label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <a href ="{%url 'registration'%}">Login</a>
+      <p><button type="submit"></button></p>
+      <label>
+      </p><input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+    </p><button type="button" class="cancelbtn">Cancel</button>
+    <a href ="{%url 'changepassword'%}">changepassword</a>
+</p><span class="psw"> <a href="#">password?</a></span>
+    </div>
+  </form>
+
+
+{% endblock %}
